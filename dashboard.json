@@ -1,140 +1,142 @@
 {
-	"version": 1,
-	"allow_edit": true,
-	"plugins": [],
-	"panes": [
-		{
-			"width": 1,
-			"row": {
-				"3": 1,
-				"4": 1
-			},
-			"col": {
-				"3": 1,
-				"4": 1
-			},
-			"col_width": 1,
-			"widgets": [
-				{
-					"type": "gauge",
-					"settings": {
-						"title": "Boiler 1",
-						"value": "datasources[\"3s\"][0]",
-						"units": "Deg",
-						"min_value": 0,
-						"max_value": 100
-					}
-				}
-			]
-		},
-		{
-			"width": 1,
-			"row": {
-				"3": 1,
-				"4": 1
-			},
-			"col": {
-				"3": 2,
-				"4": 2
-			},
-			"col_width": 1,
-			"widgets": [
-				{
-					"type": "sparkline",
-					"settings": {
-						"value": [
-							"datasources[\"2s\"][0]",
-							"datasources[\"2s\"][1]"
-						],
-						"include_legend": true,
-						"legend": "B1,B2"
-					}
-				}
-			]
-		},
-		{
-			"width": 1,
-			"row": {
-				"3": 1,
-				"4": 1
-			},
-			"col": {
-				"3": 3,
-				"4": 3
-			},
-			"col_width": 1,
-			"widgets": [
-				{
-					"type": "highcharts-timeseries",
-					"settings": {
-						"timeframe": 60,
-						"blocks": 3,
-						"chartType": "spline",
-						"xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
-						"yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
-						"series1": "datasources[\"3s\"][0]",
-						"series1label": "Boiler 3",
-						"series2": "datasources[\"3s\"][3]",
-						"series2label": "Boiler 4"
-					}
-				}
-			]
-		},
-		{
-			"width": 1,
-			"row": {
-				"3": 9
-			},
-			"col": {
-				"3": 1
-			},
-			"col_width": 3,
-			"widgets": [
-				{
-					"type": "list",
-					"settings": {
-						"show_header": true,
-						"blocks": 4,
-						"value": "return [new Date(), datasources[\"3s\"][0], datasources[\"3s\"][1], datasources[\"3s\"][2], datasources[\"3s\"][3], datasources[\"3s\"][4]]"
-					}
-				}
-			]
-		}
-	],
-	"datasources": [
-		{
-			"name": "1s",
-			"type": "random",
-			"settings": {
-				"refresh": 1,
-				"num_values": 5,
-				"precision": 1,
-				"min_value": 1,
-				"max_value": 100
-			}
-		},
-		{
-			"name": "2s",
-			"type": "random",
-			"settings": {
-				"refresh": 2,
-				"num_values": 5,
-				"precision": 1,
-				"min_value": 1,
-				"max_value": 100
-			}
-		},
-		{
-			"name": "3s",
-			"type": "random",
-			"settings": {
-				"refresh": 3,
-				"num_values": 5,
-				"precision": 1,
-				"min_value": 1,
-				"max_value": 100
-			}
-		}
-	],
-	"columns": 4
+  "version": 1,
+  "allow_edit": false,
+  "plugins": [],
+  "panes": [
+    {
+      "width": 1,
+      "row": {
+        "3": 1,
+        "4": 1
+      },
+      "col": {
+        "3": 1,
+        "4": 1
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "gauge",
+          "settings": {
+            "title": "Boiler 1",
+            "value": "datasources[\"3s\"][0]",
+            "units": "Deg",
+            "min_value": 0,
+            "max_value": 100
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 1,
+        "4": 1
+      },
+      "col": {
+        "3": 2,
+        "4": 2
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "sparkline",
+          "settings": {
+            "value": [
+              "datasources[\"2s\"][0]",
+              "datasources[\"2s\"][1]"
+            ],
+            "include_legend": true,
+            "legend": "B1,B2"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 1,
+        "4": 1
+      },
+      "col": {
+        "3": 3,
+        "4": 3
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "highcharts-timeseries",
+          "settings": {
+            "timeframe": 60,
+            "blocks": 3,
+            "chartType": "spline",
+            "xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+            "yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+            "series1": "datasources[\"3s\"][0]",
+            "series1label": "Boiler 3",
+            "series2": "datasources[\"3s\"][3]",
+            "series2label": "Boiler 4"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 9,
+        "4": 9
+      },
+      "col": {
+        "3": 1,
+        "4": 1
+      },
+      "col_width": 3,
+      "widgets": [
+        {
+          "type": "list",
+          "settings": {
+            "show_header": true,
+            "blocks": 4,
+            "value": "return [new Date(), datasources[\"3s\"][0], datasources[\"3s\"][1], datasources[\"3s\"][2], datasources[\"3s\"][3], datasources[\"3s\"][4]]"
+          }
+        }
+      ]
+    }
+  ],
+  "datasources": [
+    {
+      "name": "1s",
+      "type": "random",
+      "settings": {
+        "refresh": 1,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    },
+    {
+      "name": "2s",
+      "type": "random",
+      "settings": {
+        "refresh": 2,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    },
+    {
+      "name": "3s",
+      "type": "random",
+      "settings": {
+        "refresh": 3,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    }
+  ],
+  "columns": 3
 }
