@@ -71,7 +71,7 @@
             "blocks": 3,
             "chartType": "spline",
             "xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
-            "yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"max\":100, \"floor\":0}",
+            "yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"max\":100, \"min\":0, \"floor\":0}",
             "series1": "datasources[\"3s\"][0]",
             "series1label": "Boiler 3",
             "series2": "datasources[\"3s\"][3]",
