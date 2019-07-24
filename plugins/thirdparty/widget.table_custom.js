@@ -3,8 +3,12 @@
 {
     //Setting white-space to normal to override gridster's inherited value
     freeboard.addStyle('table.list-table', "width: 100%; white-space: normal !important; ");
-    freeboard.addStyle('table.list-table td, table.list-table th', "padding: 2px 2px 2px 2px; vertical-align: top; text-align: center;");
+    freeboard.addStyle('table.list-table td, table.list-table th', "padding: 10px 0px 10px 0px; vertical-align: top; text-align: center; font-size: 18px; font-weight: bold;");
+    freeboard.addStyle('table.list-table th', "color: rgba(255,255,255,0.65); ");
+    freeboard.addStyle('table.list-table tr td:first-child', "color: #ffffff; ");
+    freeboard.addStyle('[data-sizey="10"] .widget', "padding: 0px !important");
     freeboard.addStyle('li.scroller_enable', "overflow-y: scroll !important;");
+    freeboard.addStyle('tbody tr:nth-child(odd)',"background-color: rgba(255,255,255, 0.1)");
 
     var tableWidget = function (settings) {
         var self = this;
@@ -27,12 +31,10 @@
 
                 rowHTML = templateRow.clone();
 
-                console.log(stateObject);
                 try {
                     $.each(stateObject.value, function(valueKey, value){
-                        console.log(value, valueKey);
                         if (valueKey == 0) {
-                            rowHTML.append('<td>' + moment(value).format('MMMM Do YYYY, h:mm:ss a') + '</td>');
+                            rowHTML.append('<td>' + moment(value).format('DD, MMM YY, h:mm:ss a') + '</td>');
                         } else {
                             rowHTML.append('<td style="color: ' + findClass(value, 25, 40) + '">' + value + '</td>');
                         }
