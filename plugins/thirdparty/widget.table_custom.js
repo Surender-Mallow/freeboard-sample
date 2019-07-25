@@ -34,7 +34,7 @@
                 try {
                     $.each(stateObject.value, function(valueKey, value){
                         if (valueKey == 0) {
-                            rowHTML.append('<td>' + moment(value).format('DD, MMM YY, h:mm:ss a') + '</td>');
+                            rowHTML.append('<td>' + moment(value).format('DD MMM YY, h:mm:ss a') + '</td>');
                         } else {
                             rowHTML.append('<td style="color: ' + findClass(value, 25, 40) + '">' + value + '</td>');
                         }
@@ -56,7 +56,7 @@
 
         function findClass(value, min, max) {
             if (value > max) {
-                return 'red';
+                return '#ff073a';
             } else if (value > min && value < max) {
                 return 'yellow'
             } else {
