@@ -2,7 +2,6 @@
     height: 950px !important;
     padding: 0px;
     overflow: scroll;
-    width: 1000px !important;
 }
 
 .gridster.responsive-column-width.ready ul li {
