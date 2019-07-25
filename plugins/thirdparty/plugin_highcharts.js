@@ -92,8 +92,7 @@
 			"display_name": "Time series (Highcharts)",
 			"description": "Time series line chart.",
 			"external_scripts": [
-				"https://code.highcharts.com/highcharts.js",
-				"https://code.highcharts.com/modules/exporting.js"
+				"https://code.highcharts.com/highcharts.js"
 			],
 			"fill_size": true,
 			"settings": highchartsLineWidgetSettings,
