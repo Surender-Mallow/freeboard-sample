@@ -10,7 +10,7 @@
     position: static !important;
 }
 
-.gridster.responsive-column-width.ready ul li:not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+.gridster.responsive-column-width.ready ul li:not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(6)) {
     width: 100% !important;
     margin-top: 15px !important;
 }
@@ -58,6 +58,24 @@ header {
     width: 33.33333% !important;
     border-radius: 0px !important;
     height: 200px !important;
+}
+
+[data-row="16"] {
+    float: right;
+    margin-bottom: 15px !important;
+    border-radius: 0px !important;
+}
+
+[data-row="16"][data-col="2"] {
+    width: 66.66667% !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+[data-row="16"][data-col="1"] {
+    width: 33.33333% !important;
+    border-bottom-left-radius: 8px !important;
+    border-top-left-radius: 8px !important;
 }
 
 [data-row="8"][data-col="1"] {
