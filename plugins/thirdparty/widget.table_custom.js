@@ -43,14 +43,7 @@
                     console.log(e);
                 }
 
-                // rowHTML.append('<td">' + new Date() + '</td>');
-                // rowHTML.append('<td style="color: ' + findClass(stateObject.value1, 25, 40) + '">' + stateObject.value1 + '</td>');
-                // rowHTML.append('<td style="color: ' + findClass(stateObject.value2, 50, 60) + '">' + stateObject.value2 + '</td>');
-                // rowHTML.append('<td style="color: ' + findClass(stateObject.value3, 15, 40) + '">' + stateObject.value3 + '</td>');
-                // rowHTML.append('<td style="color: ' + findClass(stateObject.value4, 45, 60) + '">' + stateObject.value4 + '</td>');
-                // rowHTML.append('<td style="color: ' + findClass(stateObject.value5, 30, 80) + '">' + stateObject.value5 + '</td>');
-
-                stateElement.find('tbody').append(rowHTML);
+                stateElement.find('tbody').prepend(rowHTML);
 
                 //show or hide the header based on the setting
                 if (currentSettings.show_header) {
@@ -65,9 +58,9 @@
             if (value > max) {
                 return 'red';
             } else if (value > min && value < max) {
-                return 'orange'
+                return 'yellow'
             } else {
-                return 'green';
+                return '#00FF00';
             }
         }
 
