@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "allow_edit": true,
+  "plugins": [],
+  "panes": [
+    {
+      "width": 1,
+      "row": {
+        "3": 1,
+        "4": 1
+      },
+      "col": {
+        "3": 1,
+        "4": 1
+      },
+      "col_width": 3,
+      "widgets": [
+        {
+          "type": "sparkline",
+          "settings": {
+            "value": [
+              "datasources[\"2s\"][0]",
+              "datasources[\"2s\"][1]",
+              "datasources[\"2s\"][2]"
+            ],
+            "include_legend": true,
+            "legend": "B1,B2,B3"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 8,
+        "5": 8
+      },
+      "col": {
+        "3": 1,
+        "5": 1
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "vertical-linear-gauge",
+          "settings": {
+            "title": "Boiler 1",
+            "value": "datasources[\"2s\"][0]",
+            "units": "Deg",
+            "min_value": 0,
+            "max_value": 100
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 8,
+        "5": 8
+      },
+      "col": {
+        "3": 2,
+        "5": 2
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "vertical-linear-gauge",
+          "settings": {
+            "title": "Boiler 2",
+            "value": "datasources[\"2s\"][1]",
+            "units": "Deg",
+            "min_value": 0,
+            "max_value": 100
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 8,
+        "5": 8
+      },
+      "col": {
+        "3": 3,
+        "5": 3
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "vertical-linear-gauge",
+          "settings": {
+            "title": "Boiler 3",
+            "value": "datasources[\"2s\"][2]",
+            "units": "Deg",
+            "min_value": 0,
+            "max_value": 100
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 16,
+        "4": 1,
+        "5": 1
+      },
+      "col": {
+        "3": 2,
+        "4": 2,
+        "5": 2
+      },
+      "col_width": 2,
+      "widgets": [
+        {
+          "type": "highcharts-timeseries",
+          "settings": {
+            "timeframe": 60,
+            "blocks": 4,
+            "chartType": "spline",
+            "xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+            "yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"10\", \"max\":100, \"min\":0, \"floor\":0}",
+            "series1": "datasources[\"3s\"][0]",
+            "series1label": "Boiler 4",
+            "series2": "datasources[\"3s\"][3]",
+            "series2label": "Boiler 5"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 16,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "col": {
+        "3": 1,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2
+      },
+      "col_width": 1,
+      "widgets": [
+        {
+          "type": "gauge",
+          "settings": {
+            "title": "Boiler 1",
+            "value": "datasources[\"3s\"][0]",
+            "units": "Deg",
+            "min_value": 0,
+            "max_value": 100
+          }
+        }
+      ]
+    },
+    {
+      "width": 1,
+      "row": {
+        "3": 26,
+        "4": 9,
+        "6": 9,
+        "7": 9
+      },
+      "col": {
+        "3": 1,
+        "4": 1,
+        "6": 1,
+        "7": 1
+      },
+      "col_width": 3,
+      "widgets": [
+        {
+          "type": "list",
+          "settings": {
+            "show_header": true,
+            "blocks": 4,
+            "value": "return [new Date(), datasources[\"3s\"][0], datasources[\"3s\"][1], datasources[\"3s\"][2], datasources[\"3s\"][3], datasources[\"3s\"][4]]"
+          }
+        }
+      ]
+    }
+  ],
+  "datasources": [
+    {
+      "name": "1s",
+      "type": "random",
+      "settings": {
+        "refresh": 1,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    },
+    {
+      "name": "2s",
+      "type": "random",
+      "settings": {
+        "refresh": 2,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    },
+    {
+      "name": "3s",
+      "type": "random",
+      "settings": {
+        "refresh": 3,
+        "num_values": 5,
+        "precision": 1,
+        "min_value": 1,
+        "max_value": 100
+      }
+    }
+  ],
+  "columns": 3
+}
