@@ -43,6 +43,10 @@
                     console.log(e);
                 }
 
+                if ($('.list-table tbody tr').length >= 20) {
+                    $('.list-table tbody tr:last').remove();
+                }
+
                 stateElement.find('tbody').prepend(rowHTML);
 
                 //show or hide the header based on the setting
