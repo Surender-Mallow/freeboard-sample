@@ -152,7 +152,7 @@
         {
           "type": "gauge",
           "settings": {
-            "title": "Boiler 1",
+            "title": "Boiler X",
             "value": "datasources[\"3s\"][0]",
             "units": "Deg",
             "min_value": 0,
