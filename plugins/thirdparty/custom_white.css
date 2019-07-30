@@ -2,6 +2,10 @@ body {
     background-color: #ffffff !important;
 }
 
+.gridster.responsive-column-width.ready ul li {
+    background-color: #384e6f !important;
+}
+
 .gridster.responsive-column-width.ready ul li:not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
     width: 100% !important;
     margin-top: 15px !important;
