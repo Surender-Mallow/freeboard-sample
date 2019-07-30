@@ -49,6 +49,11 @@
 
                 stateElement.find('tbody').prepend(rowHTML);
 
+                var tableHrisht = $('.list-table').outerHeight();
+                $('[data-row="26"][data-sizey="10"], [data-row="26"][data-sizey="10"] .sub-section-height-4').css("height", tableHrisht + 10, "!important");
+                $('[data-row="30"][data-sizey="10"], [data-row="30"][data-sizey="10"] .sub-section-height-4').css("height", tableHrisht + 10, "!important");
+                $('[data-row="9"][data-sizey="10"], [data-row="9"][data-sizey="10"] .sub-section-height-4').css("height", tableHrisht + 40, "!important");
+
                 //show or hide the header based on the setting
                 if (currentSettings.show_header) {
                     stateElement.find('thead').show();

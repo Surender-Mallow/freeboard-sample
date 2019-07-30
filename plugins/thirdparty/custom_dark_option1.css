@@ -1,63 +1,6 @@
-.gridster.responsive-column-width.ready ul {
-    height: 950px !important;
-    padding: 0px;
-    overflow: scroll;
-}
-
-.gridster.responsive-column-width.ready ul li {
-    border-radius: 8px;
-    margin-right: 0px !important;
-    position: static !important;
-}
-
 .gridster.responsive-column-width.ready ul li:not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(6)) {
     width: 100% !important;
     margin-top: 15px !important;
-}
-
-.gridster.responsive-column-width.ready li:first-child {
-    height: 150px;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-}
-
-.gridster.responsive-column-width.ready li:last-child {
-    height: 300px !important;
-}
-
-.gridster.responsive-column-width.ready li:last-child .sub-section.sub-section-height-4 {
-    height: 300px !important;
-}
-.gridster.responsive-column-width.ready ul li:not(:first-child):not(:last-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
-    height: 250px !important;
-}
-
-.gridster.responsive-column-width.ready ul.board-toolbar {
-    height: 100px !important;
-}
-
-.gridster.responsive-column-width.ready ul.board-toolbar li {
-    height: 10px !important;
-}
-
-.sub-section-tools {
-    height: 20px !important;
-}
-
-.board-content {
-    top: 0px;
-}
-
-header {
-    display: none;
-}
-
-[data-row="8"] {
-    float: left;
-    margin-bottom: 15px !important;
-    width: 33.33333% !important;
-    border-radius: 0px !important;
-    height: 200px !important;
 }
 
 [data-row="16"] {
@@ -76,38 +19,4 @@ header {
     width: 33.33333% !important;
     border-bottom-left-radius: 8px !important;
     border-top-left-radius: 8px !important;
-}
-
-[data-row="8"][data-col="1"] {
-    border-bottom-left-radius: 8px !important;
-}
-
-[data-row="8"][data-col="3"] {
-    border-bottom-right-radius: 8px !important;
-}
-
-.sparkline-legend-value {
-    width: 33.33333% !important;
-    text-align: center !important;
-    font-weight: bold;
-}
-
-.sub-section {
-    border-bottom: none;
-}
-
-.section-title {
-    text-align: center !important;
-    color: white;
-    font-weight: bold;
-}
-
-/*.sub-section.sub-section-height-3 {*/
-/*    width: 50%;*/
-/*    display: inline-block;*/
-/*    padding-top: 15px;*/
-/*}*/
-
-::-webkit-scrollbar {
-    width: 0px !important;
 }
